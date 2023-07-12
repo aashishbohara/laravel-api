@@ -17,7 +17,7 @@ use App\Http\Controllers\UserController;
 */
 Route::group(['middleware' => 'api'], function () {
     Route::resource('users', 'App\Http\Controllers\UserController');
-    Route::get('/users', [UserController::class, 'index']);
+    Route::get('/users', [UserController::class, 'home']);
     Route::get('/users/{id}', [UserController::class, 'show']);
     Route::post('/users', [UserController::class, 'store']);
     Route::post('/users/{id}', [UserController::class, 'update']);
